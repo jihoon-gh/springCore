@@ -18,6 +18,7 @@ public class OrderApp {
 //        OrderService orderService = appConfig.orderService();
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+        //applicationContext는 인터페이스임. 뒤의 Annotation..Context는 구현체임
         MemberService memberService = applicationContext.getBean("memberService",MemberService.class);
         OrderService orderService = applicationContext.getBean("orderService",OrderService.class);
 
